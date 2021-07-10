@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+html{
+    font-size: 100%;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(#2c3e50, #30336b);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 20%;
+    height: 25rem;
+    position: relative;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 2px 17px 2px #c7ecee;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+}
+.card:hover{
+    transform: translateY(20px);
+}
+.card::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    background-image: linear-gradient(#6f1e516b,#192a56);
+    opacity: 0;
+    transition: 0.5s all;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.card:hover::before{
+    opacity: 1;
+
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+.content{
+    position: relative;
+    z-index: 3;
+    opacity: 0;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+
+}
+.content:hover{
+    transform: translateY(-30px);
+    opacity: 1;
+}
+.content p{
+    padding: 1rem;
+}
+.content h1{
+    padding: 0 1rem;
+    font-size: 2rem;
+}
+.content a{
+    padding: 1rem;
+    display: inline-block;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: crimson;
+    color: #fff;
+    border-radius: 1rem;
+    margin: 0.5rem 1rem 1rem 1rem;
+}
+.content a:hover{
+    background-color: #192a56;
+    border: 2px solid crimson;
+    transform: scale(1.1);
+}
+@media(max-width:850px){
+   
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35%;
+    }
+    .content{
+        width: 70%;
+        height: 60%;
+    
+    }
+    html{
+        font-size: 80%;
+    }
+
+    
+}
+@media(max-width:550px){
+   
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+    }
+    .content{
+        width: 60%;
+        height: 50%;
+    
+    }
+    html{
+        font-size: 70%;
+    }
+
+    
+}
+@media(max-width:450px){
+   main{
+       width: 100%;
+       height: 100%;
+   }
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        margin-bottom: 5rem;
+    }
+    .content{
+        width: 60%;
+        height: 50%;
+    
+    }
+    html{
+        font-size: 70%;
+    }
+
+    
+}
+
+
+
+
+
+
+
